@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaySnack | Toko Camilan</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Analytics Dummy -->
+<script>
+console.log("Google Analytics Dummy Aktif");
+
+// Simulasi Tracking
+function trackEvent(eventName) {
+    console.log("Event:", eventName);
+}
+</script>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<h2 class="logo">
+🍿 MaySnack
+</h2>
+
+<ul class="nav-links">
+
+    <li><a href="#">🏠 Home</a></li>
+
+    <li><a href="#produk">🍴 Produk</a></li>
+
+    <li id="loginMenu">
+        <a href="login.html">🔑 Login</a>
+    </li>
+
+    <li id="profileMenu" class="profile-menu" style="display:none; position:relative;">
+
+    <span id="profileName" style="cursor:pointer;">
+        👤 Halo
+    </span>
+
+    <div id="profileDropdown" class="profile-dropdown" style="display:none;">
+
+        <a href="profile.html">👤 Profil</a>
+
+        <a href="orders.html">📦 Riwayat Pesanan</a>
+
+        <a id="adminLink" href="admin.html" style="display:none;">
+            ⚙️ Dashboard Admin
+        </a>
+
+        <a href="#" id="logoutBtn">
+            -> Logout
+        </a>
+
+    </div>
+
+</li>
+
+    <li>
+        <a href="cart.html" class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </a>
+    </li>
+
+</ul>
+
+</header>
+<!-- SEARCH BAR -->
+<section class="top-search">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Cari camilan..."
+    >
+    <select id="sort">
+    <option value="default">Urutkan</option>
+    <option value="az">Nama A - Z</option>
+    <option value="za">Nama Z - A</option>
+    <option value="low">Harga Termurah</option>
+    <option value="high">Harga Termahal</option>
+</select>
+
+    <select id="category">
+        <option value="all">Semua Kategori</option>
+        <option value="Keripik">Keripik</option>
+        <option value="Permen">Permen</option>
+        <option value="Biskuit">Biskuit</option>
+        <option value="Kacang">Kacang</option>
+    </select>
+
+</section>
+<section class="hero">
+
+    <div class="hero-content">
+    </div>
+
+</section>
+
+<!-- ================= PRODUK ================= -->
+
+<section id="produk">
+
+    <h2 class="section-title">
+        Produk Kami
+    </h2>
+
+    <div id="product-list" class="products">
+
+        <!-- Produk akan muncul dari JavaScript -->
+
+    </div>
+
+</section>
+<!-- ================= TESTIMONI ================= -->
+
+<section class="testimoni">
+
+    <p class="sub-title">ULASAN PELANGGAN</p>
+
+    <h2 class="section-title">
+        Apa Kata Pelanggan MaySnack?
+    </h2>
+
+    <div class="testimoni-container">
+
+        <div class="testimoni-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Keripiknya renyah banget dan rasanya pas.
+                Pengiriman juga cepat. Pasti beli lagi!"
+            </p>
+
+            <h4>Alya Putri</h4>
+
+            <span>Pelanggan</span>
+
+        </div>
+
+        <div class="testimoni-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Popcorn caramelnya enak dan kemasannya rapi.
+                Cocok buat teman nonton."
+            </p>
+
+            <h4>Rizky Saputra</h4>
+
+            <span>Mahasiswa</span>
+
+        </div>
+
+        <div class="testimoni-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Wafer coklat favorit keluarga.
+                Harganya juga terjangkau."
+            </p>
+
+            <h4>Siti Nurhaliza</h4>
+
+            <span>Ibu Rumah Tangga</span>
+
+        </div>
+
+    </div>
+
+<div class="review-form">
+
+    <h3>⭐ Tambahkan Ulasan</h3>
+
+    <input type="text" id="review-name" placeholder="Nama Anda">
+
+    <select id="review-rating">
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐">⭐</option>
+    </select>
+
+    <textarea
+        id="review-text"
+        placeholder="Tulis ulasan..."
+    ></textarea>
+    <button type="button" onclick="addReview()" class="btn">
+    Kirim Ulasan
+</button>
+
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>
+
+<h3>Tentang MaySnack</h3>
+
+<p>
+MaySnack menyediakan berbagai camilan lezat
+dengan kualitas terbaik dan harga terjangkau.
+</p>
+
+</div>
+
+<div>
+
+<h3>Sosial Media Kami</h3>
+
+<p><i class="fab fa-instagram"></i> Instagram : @maysnack.id</p>
+
+<p><i class="fab fa-tiktok"></i> TikTok : @maysnack.id</p>
+
+<p><i class="fab fa-facebook"></i> Facebook : MaySnack Indonesia</p>
+
+<p><i class="fab fa-youtube"></i> YouTube : MaySnack Official</p>
+
+</div>
+
+<div>
+
+<h3>Kontak & Hubungi</h3>
+
+<p><i class="fas fa-map-marker-alt"></i> Bandung, Indonesia</p>
+
+<p><i class="fas fa-envelope"></i> maysnack@gmail.com</p>
+
+<p><i class="fas fa-phone"></i> 0812-3456-7890</p>
+
+</div>
+
+<div class="jam-operasional">
+
+<h4>🕒 Jam Operasional</h4>
+
+<p>Senin - Jumat : 08.00 - 20.00 WIB</p>
+<p>Sabtu - Minggu : 09.00 - 18.00 WIB</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 MaySnack. All Rights Reserved.
+
+</div>
+
+</footer>
+<!-- ================= MODAL DETAIL ================= -->
+
+<div id="product-modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img id="modal-image" src="" alt="">
+
+        <h2 id="modal-name"></h2>
+
+        <p id="modal-price"></p>
+
+        <p id="modal-description"></p>
+
+        <button id="modal-cart-btn" class="btn">
+            🛒 Tambah ke Keranjang
+        </button>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script src="js/review.js"></script>
+</body>
+</html>

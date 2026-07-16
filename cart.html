@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang | SnackHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Analytics Dummy -->
+<script>
+console.log("Google Analytics Dummy Aktif");
+</script>
+</head>
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<h2 class="logo">MaySnack</h2>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="checkout.html">Checkout</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section style="padding:40px 8%;">
+
+<h2>Keranjang Belanja</h2>
+
+<div id="cart-items"></div>
+
+<div class="summary-card">
+
+    <h3>Ringkasan Belanja</h3>
+
+    <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">Rp0</span>
+    </div>
+
+    <div class="summary-row">
+        <span>Ongkos Kirim</span>
+        <span style="color:green;">Gratis</span>
+    </div>
+
+    <hr>
+
+    <div class="summary-row total-row">
+        <strong>Total Bayar</strong>
+        <strong id="total">Rp0</strong>
+    </div>
+
+    <a href="checkout.html" class="checkout-btn">
+        🛒 Checkout Sekarang
+    </a>
+
+</div>
+
+</section>
+
+<script src="js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | MaySnack</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Analytics Dummy -->
+<script>
+console.log("Google Analytics Dummy Aktif");
+</script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo"> MaySnack</h2>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html">Keranjang</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="checkout-page">
+
+    <div class="checkout-container">
+
+        <!-- KIRI -->
+        <div class="checkout-card">
+
+            <h2>Daftar Belanja Anda</h2>
+
+            <div id="checkout-items">
+
+                <p>Keranjang belanja kosong.</p>
+
+            </div>
+
+            <h3 id="checkout-total">
+                Total: Rp0
+            </h3>
+            <hr>
+
+        </div>
+
+        <!-- KANAN -->
+        <div class="checkout-card">
+
+            <h2>Formulir Data & Pembayaran</h2>
+
+            <form id="checkout-form">
+
+                <label>Nama Lengkap *</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                >
+
+                <label>Email Aktif *</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="email@gmail.com"
+                    required
+                >
+
+                <label>Nomor HP *</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="08xxxxxxxxxx"
+                    required
+                >
+
+                <label>Alamat Lengkap *</label>
+
+                <textarea
+                    id="address"
+                    rows="4"
+                    placeholder="Masukkan alamat lengkap"
+                    required
+                ></textarea>
+
+    <h3 class="payment-title">Pilih Metode Pembayaran</h3>
+
+<select id="paymentCategory">
+    <option value="">-- Pilih Kategori Pembayaran --</option>
+    <option value="ewallet">E-Wallet</option>
+    <option value="bank">Transfer Bank</option>
+    <option value="qris">QRIS</option>
+    <option value="cod">COD (bayar di tempat)</option>
+</select>
+<div class="payment-list" id="paymentList" style="display:none;">
+
+</div>
+
+<div id="paymentOptions"></div>
+
+</div>
+<button type="submit" class="btn"> 
+bayar sekarang 
+</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
