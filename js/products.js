@@ -1,4 +1,4 @@
-const defaultProducts = [
+const products = [
 
 {
     id:1,
@@ -114,9 +114,3 @@ function updateCartCount() {
 }
 
 updateCartCount();
-let products = JSON.parse(localStorage.getItem("products"));
-
-if (!products) {
-    products = defaultProducts;
-    localStorage.setItem("products", JSON.stringify(products));
-}
